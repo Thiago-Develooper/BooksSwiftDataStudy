@@ -146,24 +146,6 @@ struct EditBookView: View {
     }
         
     private func setDatas(oldValue: Status, newValue: Status) {
-//        if newValue == .onShelf {
-//            dateStarted = Date.distantPast
-//            dateCompleted = Date.distantPast
-//        } else if newValue != .onShelf {
-//            // from completed to inProgress
-//            dateCompleted = Date.distantPast
-//        } else if newValue != .completed {
-//            // Book has been started
-//            dateStarted = Date.now
-//        } else if newValue != .inProgress {
-//            // Forgot to start book
-//            dateCompleted = Date.now
-//            dateStarted = dateAdded
-//        } else {
-//            // completed
-//            dateCompleted = Date.now
-//        } 
-        
         if newValue == .onShelf {
             dateStarted = Date.distantPast
             dateCompleted = Date.distantPast

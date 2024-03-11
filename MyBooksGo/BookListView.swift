@@ -68,15 +68,15 @@ struct BookListCell: View {
                 Text(book.author).foregroundStyle(.secondary)
                 
                 //MARK: Classificação por estrelas
-//                if let rating = book.rating {
-//                    HStack {
-//                        ForEach(0..<rating, id: \.self) { _ in
-//                            Image(systemName: "star.fill")
-//                                .imageScale(.small)
-//                                .foregroundStyle(.yellow)
-//                        }
-//                    }
-//                }
+                if let rating = book.rating {
+                    HStack {
+                        ForEach(0..<rating, id: \.self) { _ in
+                            Image(systemName: "star.fill")
+                                .imageScale(.small)
+                                .foregroundStyle(.yellow)
+                        }
+                    }
+                }
             }
         }
     }
@@ -93,7 +93,7 @@ struct BooksListComponent: View {
             ForEach(books) { book in
                 NavigationLink {
                     //MARK: Conteúdo da navigationLink
-//                    EditBookView(book: book)
+                    EditBookView(book: book)
                 } label: {
                     BookListCell(book: book)
                 }
