@@ -128,7 +128,7 @@ struct EditBookView: View {
         book.rating = rating ?? 0
         book.title = title
         book.author = author
-        book.summary = summary
+        book.sumary = summary
         book.dateAdded = dateAdded
         book.dateStarted = dateStarted
         book.dateCompleted = dateCompleted
@@ -139,7 +139,7 @@ struct EditBookView: View {
         rating = book.rating
         title = book.title
         author = book.author
-        summary = book.summary
+        summary = book.sumary
         dateAdded = book.dateAdded
         dateStarted = book.dateStarted
         dateCompleted = book.dateCompleted
@@ -166,7 +166,7 @@ struct EditBookView: View {
     }
     
     private func changedBookData() -> Bool {
-        if status != book.status || rating != book.rating || title != book.title || author != book.author || summary != book.summary || dateAdded != book.dateAdded || dateStarted != book.dateStarted || dateCompleted != book.dateCompleted {
+        if status != book.status || rating != book.rating || title != book.title || author != book.author || summary != book.sumary || dateAdded != book.dateAdded || dateStarted != book.dateStarted || dateCompleted != book.dateCompleted {
             return true
         } else {
             return  false
@@ -177,3 +177,12 @@ struct EditBookView: View {
 //#Preview {
 //    EditBookView()
 //}
+
+#Preview {
+    let preview = Preview()
+    
+    return NavigationStack {
+        EditBookView(book: Book.sampleBooks[4])
+            .modelContainer(preview.container)
+    }
+}

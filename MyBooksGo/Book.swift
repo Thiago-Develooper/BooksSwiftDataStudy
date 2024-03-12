@@ -17,7 +17,7 @@ class Book {
     var dateStarted: Date
     var dateCompleted: Date
     
-    var summary: String
+    var sumary: String
     var rating: Int?
     
     var status: Status //Relationship
@@ -48,7 +48,7 @@ class Book {
         self.dateAdded = dateAdded
         self.dateStarted = dateStarted
         self.dateCompleted = dateCompleted
-        self.summary = sumary
+        self.sumary = sumary
         self.rating = rating
         self.status = status
     }

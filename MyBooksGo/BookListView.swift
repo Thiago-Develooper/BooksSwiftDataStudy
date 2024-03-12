@@ -108,3 +108,10 @@ struct BooksListComponent: View {
         .listStyle(.plain)
     }
 }
+
+#Preview {
+    let preview = Preview()
+    preview.addExamples(Book.sampleBooks)
+    return BookListView()
+        .modelContainer(preview.container)
+}
